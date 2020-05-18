@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Coin = styled.img`
     display: block;
@@ -7,11 +8,16 @@ const Coin = styled.img`
     height: 214px;
 `;
 
+const A = styled.a`
+    display: inline-block;
+    margin-bottom: 10px;
+`;
+
 class HomePageCoin extends Component {
     render() {
         return <div>
-                    <h1>{this.props.title}</h1>
-                    <a href="#">Show all ></a>
+                    <Link to="/list" className="coin-title"><h1>{this.props.title}</h1></Link>
+                    <A href="#">Show all ></A>
                     <Coin src={this.props.src} />
             </div>
     }

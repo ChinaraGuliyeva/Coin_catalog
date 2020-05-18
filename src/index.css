@@ -23,3 +23,7 @@ input{
 a{
   color: black;
 }
+
+.coin-title{
+  text-decoration: none;
+}
