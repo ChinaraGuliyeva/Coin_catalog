@@ -2,3 +2,24 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.container{
+  padding: 52px;
+}
+
+button{
+  width: 120px;
+  height: 48px;
+  background-color: #833AE0;
+  color: white;
+  border: none;
+}
+
+input{
+  height: 42px;
+  width: 374px;
+  margin-right: 30px;
+}
+
+a{
+  color: black;
+}

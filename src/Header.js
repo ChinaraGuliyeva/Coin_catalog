@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-
 import styled from 'styled-components';
 
 const HeaderDiv = styled.div`
     display: flex;
     justify-content: space-between;
-    padding: 52px;
 `;
 
 const Heading = styled.h1`
@@ -16,7 +14,6 @@ const Heading = styled.h1`
 `;
 
 const StyledLink= styled.a`
-    color: black;
     font-size: 20px;
 `;
 
