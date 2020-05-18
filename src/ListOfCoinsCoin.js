@@ -26,7 +26,7 @@ class ListOfCoinsCoin extends Component {
         return <CoinContainer>
             <Coin src={this.props.src} />
             <div>
-                <Link to="/list" className="coin-title"><CoinTitle>{this.props.title}</CoinTitle></Link>
+                <Link to="/coin" className="coin-title"><CoinTitle>{this.props.title}</CoinTitle></Link>
                 <p>{this.props.description}</p>
             </div>
         </CoinContainer>
