@@ -5,6 +5,8 @@ import Homepage from './Homepage';
 import ListOfCoins from './ListOfCoins';
 import CoinDetails from './CoinDetails';
 import Login from './Login';
+import AdminSearch from './AdminSearch';
+import AdminAdd from './AdminAdd';
 
 class App extends Component {
   render() {
@@ -20,6 +22,12 @@ class App extends Component {
       </Route>
       <Route path="/login" exact >
         <Login/>
+      </Route>
+      <Route path="/admin-search" exact >
+        <AdminSearch/>
+      </Route>
+      <Route path="/admin-add" exact >
+        <AdminAdd/>
       </Route>
     </div>
   }

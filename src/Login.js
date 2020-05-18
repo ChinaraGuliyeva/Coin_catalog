@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import Header from './Header';
 
@@ -27,7 +28,7 @@ class Login extends Component {
                 <input id="login" />
                 <Label htmlFor="password">Password</Label>
                 <input id="password" />
-                <Button>Sign in</Button>
+                <Button><Link className='admin-search-link' to="/admin-search">Sign in</Link></Button>
             </Form>
         </div>
     }

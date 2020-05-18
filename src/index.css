@@ -31,3 +31,12 @@ a{
 .header-link{
   font-size: 20px;
 }
+
+.admin-search-link{
+  color: white;
+  text-decoration: none;
+}
+
+.edit{
+  text-decoration: none;
+}
