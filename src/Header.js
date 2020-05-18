@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const HeaderDiv = styled.div`
     display: flex;
@@ -13,15 +14,11 @@ const Heading = styled.h1`
     font-size: 40px;
 `;
 
-const StyledLink= styled.a`
-    font-size: 20px;
-`;
-
 class Header extends Component {
     render() {
         return <HeaderDiv>
             <Heading>{this.props.title}</Heading>
-            <StyledLink href="#">Admin panel</StyledLink>
+            <Link className='header-link' to='/login'>Admin panel</Link>
         </ HeaderDiv>
     }
 }

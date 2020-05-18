@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Container = styled.div`
     display: flex;
     width: 40%;
-    margin: 48px auto;
+    margin: 49px auto;
 `;
 
 const Coin = styled.img`

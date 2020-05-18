@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom';
 import Homepage from './Homepage';
 import ListOfCoins from './ListOfCoins';
 import CoinDetails from './CoinDetails';
+import Login from './Login';
 
 class App extends Component {
   render() {
@@ -16,6 +17,9 @@ class App extends Component {
       </Route>
       <Route path="/coin" exact >
         <CoinDetails/>
+      </Route>
+      <Route path="/login" exact >
+        <Login/>
       </Route>
     </div>
   }
