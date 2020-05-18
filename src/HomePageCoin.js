@@ -18,7 +18,7 @@ class HomePageCoin extends Component {
         return <div>
                     <Link to="/list" className="coin-title"><h1>{this.props.title}</h1></Link>
                     <A href="#">Show all ></A>
-                    <Coin src={this.props.src} />
+                    <Coin src={this.props.src} alt="Монета"/>
             </div>
     }
 }

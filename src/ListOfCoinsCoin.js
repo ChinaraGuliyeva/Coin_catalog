@@ -24,7 +24,7 @@ const CoinTitle = styled.h1`
 class ListOfCoinsCoin extends Component {
     render() {
         return <CoinContainer>
-            <Coin src={this.props.src} />
+            <Coin src={this.props.src} alt="Монета"/>
             <div>
                 <Link to="/coin" className="coin-title"><CoinTitle>{this.props.title}</CoinTitle></Link>
                 <p>{this.props.description}</p>
