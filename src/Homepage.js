@@ -17,8 +17,8 @@ class Homepage extends Component {
       <MainSearch />
       <CoinsContainer>
         <HomePageCoin title="Billion coins" src="https://upload.wikimedia.org/wikipedia/commons/2/23/Russian_Empire-1899-Coin-5-Obverse.jpg" />
-        <HomePageCoin title="Billion coins" src="https://upload.wikimedia.org/wikipedia/commons/2/23/Russian_Empire-1899-Coin-5-Obverse.jpg" />
-        <HomePageCoin title="Billion coins" src="https://upload.wikimedia.org/wikipedia/commons/2/23/Russian_Empire-1899-Coin-5-Obverse.jpg" />
+        <HomePageCoin title="Exclusive coins" src="https://upload.wikimedia.org/wikipedia/commons/2/23/Russian_Empire-1899-Coin-5-Obverse.jpg" />
+        <HomePageCoin title="Commemorative coins" src="https://upload.wikimedia.org/wikipedia/commons/2/23/Russian_Empire-1899-Coin-5-Obverse.jpg" />
       </CoinsContainer>
     </div>
   }
