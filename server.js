@@ -16,7 +16,7 @@ const pool = mysql.createPool({
 });
 
 app.get('/coins', (req, res) => {
-    pool.query('SELECT * FROM coins_table1', (err, data) => {
+    pool.query('SELECT * FROM coins_table', (err, data) => {
         if (err) {
             res.status(500);
         }
