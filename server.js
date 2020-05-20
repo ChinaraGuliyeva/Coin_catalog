@@ -1,7 +1,10 @@
 const express = require('express');
 const mysql = require('mysql');
+const cors = require('cors');
 
 const app = express();
+
+app.use(cors());
 
 const port = process.env.PORT || 3001;
 
@@ -11,17 +14,6 @@ const pool = mysql.createPool({
     password: '2015',
     database: 'coins'
 });
-
-
-/*pool.query('SELECT * FROM coins_table1', (err, data) => {
-    if (!err) {
-        console.log(data);
-    }
-    else {
-        console.log(err);
-    }
-});*/
-
 
 app.get('/coins', (req, res) => {
     pool.query('SELECT * FROM coins_table1', (err, data) => {
