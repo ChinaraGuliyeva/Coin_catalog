@@ -13,18 +13,25 @@ const pool = mysql.createPool({
 });
 
 
-pool.query('SELECT * FROM coins_table1', (err, data) => {
+/*pool.query('SELECT * FROM coins_table1', (err, data) => {
     if (!err) {
         console.log(data);
     }
     else {
         console.log(err);
     }
-});
+});*/
 
 
-app.get('/', (req, res) => {
-    res.send("Домашняя страница");
+app.get('/coins', (req, res) => {
+    pool.query('SELECT * FROM coins_table1', (err, data) => {
+        if (err) {
+            res.status(500);
+        }
+        else {
+            res.json(data);
+        }
+    });
 });
 
 app.listen(port, () => { console.log('Started server at port ' + port); });
