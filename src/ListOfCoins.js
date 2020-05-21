@@ -16,6 +16,7 @@ const Column=styled.div`
 class ListOfCoins extends Component {
     render() {
         const id=this.props.match.params.id;
+        console.log(id);
 
         return <div className="container">
             <Header title="List of the coins" />
