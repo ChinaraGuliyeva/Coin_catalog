@@ -17,8 +17,8 @@ class Homepage extends Component {
       <MainSearch />
       <CoinsContainer>
         <HomePageCoin title="Bullion coins" src="https://i.postimg.cc/gcBVSZpX/South-Vietnamese-Dong-1.png" />
-        <HomePageCoin title="Exclusive coins" src="https://i.postimg.cc/7ZJmMNTZ/ISK-2.png" />
-        <HomePageCoin title="Commemorative coins" src="https://i.postimg.cc/VvNFS981/Looney-1.png" />
+        <HomePageCoin title="Exclusive coins" src="https://i.postimg.cc/7ZJmMNTZ/ISK-2.png" onClick={this.clickHandler}/>
+        <HomePageCoin title="Commemorative coins" src="https://i.postimg.cc/VvNFS981/Looney-1.png" onClick={this.clickHandler}/>
       </CoinsContainer>
     </div>
   }

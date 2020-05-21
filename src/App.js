@@ -11,24 +11,12 @@ import AdminAdd from './AdminAdd';
 class App extends Component {
   render() {
     return <div>
-      <Route path="/" exact >
-        <Homepage />
-      </Route>
-      <Route path="/list" exact >
-        <ListOfCoins/>
-      </Route>
-      <Route path="/coin" exact >
-        <CoinDetails/>
-      </Route>
-      <Route path="/login" exact >
-        <Login/>
-      </Route>
-      <Route path="/admin-search" exact >
-        <AdminSearch/>
-      </Route>
-      <Route path="/admin-add" exact >
-        <AdminAdd/>
-      </Route>
+      <Route path="/" exact component={Homepage}/>
+      <Route path="/list/:id" exact component={ListOfCoins} />
+      <Route path="/coin" exact component={CoinDetails} />
+      <Route path="/login" exact component={Login} />
+      <Route path="/admin-search" exact component={AdminSearch} />
+      <Route path="/admin-add" exact component={AdminAdd}/>
     </div>
   }
 }
