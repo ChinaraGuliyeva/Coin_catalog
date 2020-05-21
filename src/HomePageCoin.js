@@ -13,8 +13,6 @@ const A = styled.a`
 `;
 
 class HomePageCoin extends Component {
-    clickHandler = (event) =>{
-        console.log(event.target.innerHTML)      }
     render() {
         return <div>
                     <h1>{this.props.title}</h1>

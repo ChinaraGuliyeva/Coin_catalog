@@ -12,6 +12,7 @@ const Coin = styled.img`
 const CoinContainer = styled.div`
     display: flex;
     margin-bottom: 30px;
+    width: 700px;
 `;
 
 const CoinTitle = styled.h1`
@@ -21,13 +22,17 @@ const CoinTitle = styled.h1`
     color: #833AE0;
 `;
 
+const Content =styled.p`
+    width: 224px;
+`;
+
 class ListOfCoinsCoin extends Component {
     render() {
         return <CoinContainer>
             <Coin src={this.props.src} alt="Монета"/>
             <div>
                 <Link to="/coin" className="coin-title"><CoinTitle>{this.props.title}</CoinTitle></Link>
-                <p>{this.props.description}</p>
+                <Content>{this.props.description}</Content>
             </div>
         </CoinContainer>
     }
