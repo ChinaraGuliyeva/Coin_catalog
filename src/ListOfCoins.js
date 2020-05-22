@@ -13,8 +13,7 @@ const CoinsContainer = styled.div`
 
 class ListOfCoins extends Component {
     state = {
-        coins: [],
-        name: null
+        coins: []
     }
     componentDidMount() {
         const id = this.props.match.params.id;

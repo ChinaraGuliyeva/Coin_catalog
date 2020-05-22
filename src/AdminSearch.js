@@ -33,22 +33,26 @@ const AddText = styled.a`
 `;
 
 class AdminSearch extends Component {
+    state = {
+        coins: [],
+    }
+    componentDidMount() {
+        const id = this.props.match.params.id;
+
+        fetch('http://localhost:3001/coins')
+            .then(res => res.json())
+            .then(coins => {
+                this.setState({ coins });
+            });
+    }
     render() {
+        const { coins } = this.state;
         return <div className="container">
             <Header title="Admin Panel" />
             <MainSearch />
-            <Container>
-                <ListOfCoinsCoin title="Title" src="https://upload.wikimedia.org/wikipedia/commons/2/23/Russian_Empire-1899-Coin-5-Obverse.jpg" description="Lorem ipsum" />
+            {coins.map(element => {return <Container><ListOfCoinsCoin title={element.Name} src={element.Img1} description={element.Par1}/>
                 <Button><Link className="edit" to="/admin-add">Edit</Link></Button> <Button>Delete</Button>
-            </Container>
-            <Container>
-                <ListOfCoinsCoin title="Title" src="https://upload.wikimedia.org/wikipedia/commons/2/23/Russian_Empire-1899-Coin-5-Obverse.jpg" description="Lorem ipsum" />
-                <Button><Link className="edit" to="/admin-add">Edit</Link></Button> <Button>Delete</Button>
-            </Container>
-            <Container>
-                <AddCoin><Link className="edit" to="/admin-add">+</Link></AddCoin>
-                <AddText><Link className="edit" to="/admin-add">Add a new coin</Link></AddText>
-            </Container>
+                </Container>})}
         </div>
     }
 }
