@@ -9,6 +9,7 @@ const Container = styled.div`
 `;
 
 const Coin = styled.img`
+    margin: 40px 40px; 
     display: block;
     width: 300px;
     height: 300px;
@@ -64,8 +65,38 @@ class CoinDetails extends Component {
                     <p>{coin.Par8}</p>
                     <p>{coin.Par9}</p>
                     <p>{coin.Par10}</p>
+                    <table>
+                        <tr>
+                            <td>Issuing Country</td>
+                            <td>{coin['Issuing Country']}</td>
+                        </tr>
+                        <tr>
+                            <td>Composition</td>
+                            <td>{coin.Composition}</td>
+                        </tr>
+                        <tr>
+                            <td>Quality</td>
+                            <td>{coin.Quality}</td>
+                        </tr>
+                        <tr>
+                            <td>Denomination</td>
+                            <td>{coin.Denomination}</td>
+                        </tr>
+                        <tr>
+                            <td>Year</td>
+                            <td>{coin.Year}</td>
+                        </tr>
+                        <tr>
+                            <td>Weight</td>
+                            <td>{coin.Weight}</td>
+                        </tr>
+                        <tr>
+                            <td>Price</td>
+                            <td>{coin.Price}</td>
+                        </tr>
+                    </table>
                 </div>
-                <Link to="/list">Back to the list</Link>
+                <Link to={`/list/${coin.Type}`}>Back to the list</Link>
             </DescriptionContainer>
         </Container>
     }

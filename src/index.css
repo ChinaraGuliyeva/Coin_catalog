@@ -40,3 +40,23 @@ a{
 .edit{
   text-decoration: none;
 }
+
+table{
+  margin: 40px 0;
+  width: 366px;
+  font-size: 15px;
+  border-collapse: collapse;
+}
+
+tr{
+  border-bottom: 1px solid #b1abab ;
+}
+
+tr:nth-child(2n-1){
+  background-color: white;
+}
+
+td:nth-child(2n-1){
+  padding: 5px;
+  border-right: 1px solid #b1abab ;
+}
