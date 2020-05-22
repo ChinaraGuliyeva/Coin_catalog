@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+
 
 const Coin = styled.img`
     display: block;
@@ -31,7 +31,7 @@ class ListOfCoinsCoin extends Component {
         return <CoinContainer>
             <Coin src={this.props.src} alt="Монета"/>
             <div>
-                <Link to="/coin" className="coin-title"><CoinTitle>{this.props.title}</CoinTitle></Link>
+                <CoinTitle>{this.props.title}</CoinTitle>
                 <Content>{this.props.description}</Content>
             </div>
         </CoinContainer>

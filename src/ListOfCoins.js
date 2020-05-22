@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import Header from './Header';
 import MainSearch from './MainSearch';
@@ -12,27 +13,27 @@ const CoinsContainer = styled.div`
 
 class ListOfCoins extends Component {
     state = {
-        coins: []
+        coins: [],
+        name: null
     }
     componentDidMount() {
         const id = this.props.match.params.id;
-        console.log(`Id is ${id}`);
 
         fetch('http://localhost:3001/coins')
             .then(res => res.json())
             .then(coinsData => {
-                console.log(coinsData);
                 let coins = coinsData.filter(element => {return element.Type==id});
                 this.setState({ coins });
             });
     }
+//Find where a in title is coming from
     render() {
         const { coins } = this.state;
         return <div className="container">
             <Header title="List of the coins" />
             <MainSearch />
             <CoinsContainer>
-                {coins.map(element => {return <ListOfCoinsCoin title={element.Name} src={element.Img1} description={element.Par1} />})}
+                {coins.map(element => {return <Link to={`/coin/${element.id}`} className="coin-title"><ListOfCoinsCoin title={element.Name} src={element.Img1} description={element.Par1} /></Link>})}
             </CoinsContainer>
         </div>
     }

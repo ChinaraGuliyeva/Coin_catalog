@@ -31,16 +31,39 @@ const Title = styled.h1`
 `;
 
 class CoinDetails extends Component {
+    state = {
+        coin: ''
+    }
+    componentDidMount() {
+        const id = this.props.match.params.id;
+        fetch('http://localhost:3001/coins')
+            .then(res => res.json())
+            .then(coinsData => {
+                let coin = coinsData.find(element => { return element.id == id });
+                this.setState({ coin: coin })
+                console.log(this.state.coin);
+            });
+    }
     render() {
+        const { coin } = this.state;
         return <Container>
             <div>
-                <Coin alt="Монета" />
-                <Coin alt="Монета" />
+                <Coin src={coin.Img2} alt="Монета" />
+                <Coin src={coin.Img1} alt="Монета" />
             </div>
             <DescriptionContainer>
                 <div>
-                    <Title>Title</Title>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <Title>{coin.Name}</Title>
+                    <p>{coin.Par1}</p>
+                    <p>{coin.Par2}</p>
+                    <p>{coin.Par3}</p>
+                    <p>{coin.Par4}</p>
+                    <p>{coin.Par5}</p>
+                    <p>{coin.Par6}</p>
+                    <p>{coin.Par7}</p>
+                    <p>{coin.Par8}</p>
+                    <p>{coin.Par9}</p>
+                    <p>{coin.Par10}</p>
                 </div>
                 <Link to="/list">Back to the list</Link>
             </DescriptionContainer>

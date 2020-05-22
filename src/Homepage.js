@@ -34,7 +34,6 @@ class Homepage extends Component {
 
 render() {
   const { coins } = this.state;
-  console.log(coins);
   return <div className="container">
     <Header title="Homepage" />
     <MainSearch />

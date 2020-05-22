@@ -13,7 +13,7 @@ class App extends Component {
     return <div>
       <Route path="/" exact component={Homepage}/>
       <Route path="/list/:id" exact component={ListOfCoins} />
-      <Route path="/coin" exact component={CoinDetails} />
+      <Route path="/coin/:id" exact component={CoinDetails} />
       <Route path="/login" exact component={Login} />
       <Route path="/admin-search" exact component={AdminSearch} />
       <Route path="/admin-add" exact component={AdminAdd}/>
