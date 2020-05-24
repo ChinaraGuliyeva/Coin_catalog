@@ -12,6 +12,7 @@ const CoinsContainer = styled.div`
 `;
 
 class Homepage extends Component {
+//May be array without state
   state = {
     coins: [
       {

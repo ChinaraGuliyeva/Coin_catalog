@@ -13,6 +13,7 @@ const A = styled.a`
 `;
 
 class HomePageCoin extends Component {
+//Replace a href with p
     render() {
         return <div>
                     <h1>{this.props.title}</h1>

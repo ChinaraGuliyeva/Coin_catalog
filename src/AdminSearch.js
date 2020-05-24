@@ -51,7 +51,7 @@ class AdminSearch extends Component {
             <Header title="Admin Panel" />
             <MainSearch />
             {coins.map(element => {return <Container><ListOfCoinsCoin title={element.Name} src={element.Img1} description={element.Par1}/>
-                <Button><Link className="edit" to="/admin-add">Edit</Link></Button> <Button>Delete</Button>
+                <Link className="edit" to="/admin-add"><Button>Edit</Button></Link> <Button>Delete</Button>
                 </Container>})}
         </div>
     }
