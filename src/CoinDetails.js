@@ -9,7 +9,7 @@ const Container = styled.div`
 `;
 
 const Coin = styled.img`
-    margin: 40px 40px; 
+    margin: 40px 40px;
     display: block;
     width: 300px;
     height: 300px;
