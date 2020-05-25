@@ -21,7 +21,9 @@ class SearchResultList extends Component {
         fetch('http://localhost:3001/coins')
             .then(res => res.json())
             .then(coinsData => {
-                let coins = coinsData.filter(element => {return element.Name==id});
+                let coins = coinsData.filter(element => {
+                    return element.Name.indexOf(id)!= -1
+                });
                 this.setState({ coins });
                 console.log(this.state.coins)
             });
