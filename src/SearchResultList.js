@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 import Header from './Header';
 import MainSearch from './MainSearch';
@@ -11,7 +10,7 @@ const CoinsContainer = styled.div`
     flex-wrap: wrap;
 `;
 
-class ListOfCoins extends Component {
+class SearchResultList extends Component {
     state = {
         coins: []
     }
@@ -32,10 +31,10 @@ class ListOfCoins extends Component {
             <Header title="List of the coins" />
             <MainSearch />
             <CoinsContainer>
-                {coins.map(element => {return <Link to={`/coin/${element.id}`} className="coin-title"><ListOfCoinsCoin title={element.Name} src={element.Img2} description={element.Par1} /></Link>})}
+                Search result
             </CoinsContainer>
         </div>
     }
 }
 
-export default ListOfCoins;
+export default SearchResultList;
