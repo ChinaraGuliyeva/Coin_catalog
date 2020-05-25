@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import Header from './Header';
 import MainSearch from './MainSearch';
@@ -20,18 +21,18 @@ class SearchResultList extends Component {
         fetch('http://localhost:3001/coins')
             .then(res => res.json())
             .then(coinsData => {
-                let coins = coinsData.filter(element => {return element.Type==id});
+                let coins = coinsData.filter(element => {return element.Name==id});
                 this.setState({ coins });
+                console.log(this.state.coins)
             });
     }
-//Find where a in title is coming from
     render() {
         const { coins } = this.state;
         return <div className="container">
             <Header title="List of the coins" />
             <MainSearch />
             <CoinsContainer>
-                Search result
+                {coins.map(element => {return <Link to={`/coin/${element.id}`} className="coin-title"><ListOfCoinsCoin title={element.Name} src={element.Img2} description={element.Par1} /></Link>})}
             </CoinsContainer>
         </div>
     }
