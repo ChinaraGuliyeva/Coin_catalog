@@ -22,7 +22,9 @@ class SearchResultList extends Component {
             .then(res => res.json())
             .then(coinsData => {
                 let coins = coinsData.filter(element => {
-                    return element.Name.indexOf(id)!= -1
+                    let name = element.Name.toLowerCase();
+                    let result = id.toLowerCase();
+                    return name.indexOf(result)!= -1
                 });
                 this.setState({ coins });
                 console.log(this.state.coins)
